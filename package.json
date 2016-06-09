@@ -1,0 +1,28 @@
+{
+  "name": "pagespeed-cli",
+  "version": "0.1.0",
+  "description": "Getting Google PageSpeed Insights for a app running locally - directly in the command line",
+  "main": "index.js",
+  "bin": {
+    "pagespeed-cli": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queicherius/pagespeed-cli.git"
+  },
+  "author": "queicherius@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/queicherius/pagespeed-cli/issues"
+  },
+  "homepage": "https://github.com/queicherius/pagespeed-cli#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "localtunnel": "^1.8.1",
+    "minimist": "^1.2.0",
+    "psi": "^2.0.4"
+  }
+}
