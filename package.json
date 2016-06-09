@@ -23,6 +23,7 @@
     "debug": "^2.2.0",
     "localtunnel": "^1.8.1",
     "minimist": "^1.2.0",
-    "psi": "^2.0.4"
+    "psi": "^2.0.4",
+    "tcp-port-used": "^0.1.2"
   }
 }
