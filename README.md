@@ -1,5 +1,7 @@
 # pagespeed-cli
 
+[![No Maintenance Intended](https://img.shields.io/badge/No%20Maintenance%20Intended-%E2%9C%95-red.svg?style=flat-square)](http://unmaintained.tech/)
+
 > Getting Google PageSpeed Insights for a app running locally - directly in the command line
 
 [`psi`](https://github.com/addyosmani/psi) + [`localtunnel`](https://github.com/localtunnel/localtunnel) = :heart:
