@@ -8,6 +8,11 @@ var debug = require('debug')('pagespeed-cli')
 var port = args.p || args.port
 var strategy = args.s || args.strategy
 
+if (!strategy) {
+  console.log('Missing "strategy" parameter, using "mobile"')
+  strategy = 'mobile'
+}
+
 if (!port) {
   console.log('Missing "port" parameter')
   process.exit(1)
@@ -53,6 +58,6 @@ function getPagespeed (url) {
       // We also have to wrap the resolving into a timeout, since `psi` resolves
       // before everything finished writing into the console
       setTimeout(resolve, 500)
-    }).catch((e) => setTimeout(() => reject(e), 500));
+    }).catch(reject)
   })
 }
