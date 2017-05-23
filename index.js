@@ -48,10 +48,11 @@ function getPagespeed (url) {
     threshold: 1,
     strategy: strategy.toString()
   }
+  return new Promise(function (resolve, reject) {
     psi.output(url, options).then(function () {
       // We also have to wrap the resolving into a timeout, since `psi` resolves
       // before everything finished writing into the console
       setTimeout(resolve, 500)
-    })
+    }).catch((e) => setTimeout(() => reject(e), 500));
   })
 }
