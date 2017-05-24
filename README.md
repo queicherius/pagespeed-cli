@@ -19,6 +19,9 @@ npm install pagespeed-cli
 ```bash
 # For a example app running on localhost, port 8080
 pagespeed-cli -p 8080
+
+# For a example app running on localhost, port 8080 and with desktop strategy
+pagespeed-cli -p 8080 -s desktop
 ```
 
 ## Debugging
