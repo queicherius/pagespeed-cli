@@ -6,22 +6,18 @@ var portUsed = require('tcp-port-used')
 var debug = require('debug')('pagespeed-cli')
 
 var port = args.p || args.port
-var strategy = args.s || args.strategy
-
-if (!strategy) {
-  console.log('Missing "strategy" parameter, using "mobile"')
-  strategy = 'mobile'
-}
+var strategy = args.s || args.strategy || 'mobile'
 
 if (!port) {
   console.log('Missing "port" parameter')
   process.exit(1)
 }
 
+console.log('Using strategy "' + strategy + '"')
+
 debug('Checking if local port ' + port + ' is in use')
 portUsed.check(port, '127.0.0.1').then(function (inUse) {
   if (!inUse) {
-    console.log('Strategy: ' + strategy)
     console.log('Local port ' + port + ' is not in use')
     process.exit(1)
   }
@@ -53,6 +49,7 @@ function getPagespeed (url) {
     threshold: 1,
     strategy: strategy.toString()
   }
+
   return new Promise(function (resolve, reject) {
     psi.output(url, options).then(function () {
       // We also have to wrap the resolving into a timeout, since `psi` resolves
