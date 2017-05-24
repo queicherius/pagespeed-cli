@@ -1,6 +1,6 @@
 {
   "name": "pagespeed-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Getting Google PageSpeed Insights for a app running locally - directly in the command line",
   "main": "index.js",
   "bin": {
